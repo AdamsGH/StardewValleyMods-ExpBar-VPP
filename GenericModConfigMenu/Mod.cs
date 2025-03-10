@@ -340,6 +340,11 @@ namespace GenericModConfigMenu
             );
 
             var BetterGameMenu = this.Helper.ModRegistry.GetApi<IBetterGameMenuApi>("leclair.bettergamemenu");
+            BetterGameMenu?.OnTabContextMenu(evt =>
+            {
+                if (evt.Tab == nameof(BetterGameMenuTabs.Options))
+                    evt.Entries.Add(evt.CreateEntry(I18n.Button_ModOptions(), () => this.OpenListMenuNew(), null));
+            });
             BetterGameMenu?.OnPageCreated(evt =>
             {
                 if (evt.Page is OptionsPage page)
