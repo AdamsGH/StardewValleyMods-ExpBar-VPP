@@ -347,7 +347,7 @@ namespace GenericModConfigMenu
             });
             BetterGameMenu?.OnPageCreated(evt =>
             {
-                if (evt.Page is OptionsPage page)
+                if (evt.Tab == nameof(BetterGameMenuTabs.Options) && evt.Page is OptionsPage page)
                     page.options.Add(new OptionsButton(I18n.Button_ModOptions(), () => this.OpenListMenuNew()));
             });
         }
