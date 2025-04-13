@@ -8,6 +8,7 @@
     // mod list UI
     "list.editable-heading": "Настройка модов",
     "list.not-editable-heading": "Editable from the title screen:", // TODO
+    "list.keybinds": "Keybinds", // TODO
 
     // mod config pages
     "config.buttons.cancel": "Отмена",

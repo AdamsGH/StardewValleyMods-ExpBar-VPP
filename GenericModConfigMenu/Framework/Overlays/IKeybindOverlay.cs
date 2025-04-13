@@ -28,7 +28,7 @@ namespace GenericModConfigMenu.Framework.Overlays
         /// <param name="y">The pixel Y position where the player clicked.</param>
         void OnLeftClick(int x, int y);
 
-        /// <summary>Draw the key binding overlay.</summary>
+        /// <summary>Draw the keybind overlay.</summary>
         /// <param name="spriteBatch">The sprite batch being drawn.</param>
         void Draw(SpriteBatch spriteBatch);
     }

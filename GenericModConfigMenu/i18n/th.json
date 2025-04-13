@@ -8,7 +8,7 @@
     // mod list UI
     "list.editable-heading": "กำหนดค่าม็อด",
     "list.not-editable-heading": "แก้ไขได้จากหน้าจอเริ่มต้นเกม:",
-    "list.keybindings": "คีย์ลัด",
+    "list.keybinds": "คีย์ลัด",
 
     // mod config pages
     "config.buttons.cancel": "ยกเลิก",

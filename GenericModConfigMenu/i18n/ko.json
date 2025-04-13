@@ -8,6 +8,7 @@
     // mod list UI
     "list.editable-heading": "모드 목록",
     "list.not-editable-heading": "타이틀 화면에서 편집:",
+    "list.keybinds": "Keybinds", // TODO
 
     // mod config pages
     "config.buttons.cancel": "취소",

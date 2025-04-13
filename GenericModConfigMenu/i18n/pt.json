@@ -8,7 +8,7 @@
     // mod list UI
     "list.editable-heading": "Configurar Mods",
     "list.not-editable-heading": "Editável pela tela inicial:",
-    "list.keybindings": "Teclas de Atalho",
+    "list.keybinds": "Teclas de Atalho",
 
     // mod config pages
     "config.buttons.cancel": "Cancelar",
@@ -30,4 +30,3 @@
     "options.scroll-speed.name": "Velocidade de rolagem",
     "options.scroll-speed.desc": "O número de campos para deslocar quando rolar um menu de configuração."
 }
-

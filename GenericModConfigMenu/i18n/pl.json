@@ -8,6 +8,7 @@
     // mod list UI
     "list.editable-heading": "Skonfiguruj Mody",
     "list.not-editable-heading": "Edytowalne z ekranu tytułowego:",
+    "list.keybinds": "Keybinds", // TODO
 
     // mod config pages
     "config.buttons.cancel": "Anuluj",
