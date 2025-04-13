@@ -16,10 +16,12 @@
     "config.buttons.save": "Збер.",
     "config.buttons.save-and-close": "Збер. та вийти",
 
+    // keybind overlay
     "config.rebind-key.title": "Клавіша прив'язки: {{optionName}}",
-    "config.rebind-key.simple-instructions": "Натисніть клавішу, щоб прив'язати",
-    "config.rebind-key.combo-instructions": "Натисніть комбінацію клавіш, щоб прив'язати",
+    "config.rebind-key.simple-instructions": "Натисніть клавішу, щоб прив'язати.",
+    "config.rebind-key.combo-instructions": "Натисніть комбінацію клавіш, щоб прив'язати.",
     "config.rebind-key.no-key": "(Немає)",
+    "config.rebind-key.keybind-list": "Прив'язки клавіш:",
 
 
     /*********

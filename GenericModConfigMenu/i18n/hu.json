@@ -16,10 +16,12 @@
     "config.buttons.save": "Ment",
     "config.buttons.save-and-close": "Ment/Bezár",
 
+    // keybind overlay
     "config.rebind-key.title": "Új billentyű: {{optionName}}",
     "config.rebind-key.simple-instructions": "Nyomj meg egy új billentyűt...",
     "config.rebind-key.combo-instructions": "Nyomj meg egy új billentyűkombinációt...",
     "config.rebind-key.no-key": "(Nincs)",
+    "config.rebind-key.keybind-list": "Billentyűzetek:",
 
 
     /*********

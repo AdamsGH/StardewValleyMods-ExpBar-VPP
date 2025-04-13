@@ -16,10 +16,12 @@
     "config.buttons.save": "Save",
     "config.buttons.save-and-close": "Save & Close",
 
+    // keybind overlay
     "config.rebind-key.title": "Rebinding key: {{optionName}}",
-    "config.rebind-key.simple-instructions": "Press a key to rebind",
-    "config.rebind-key.combo-instructions": "Press a key combination to rebind",
+    "config.rebind-key.simple-instructions": "Press a key to rebind.",
+    "config.rebind-key.combo-instructions": "Press a key combination to rebind.",
     "config.rebind-key.no-key": "(None)",
+    "config.rebind-key.keybind-list": "Keybinds:",
 
 
     /*********

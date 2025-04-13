@@ -16,10 +16,12 @@
     "config.buttons.save": "Salvar",
     "config.buttons.save-and-close": "Salvar e Fechar",
 
+    // keybind overlay
     "config.rebind-key.title": "Vinculando tecla: {{optionName}}",
-    "config.rebind-key.simple-instructions": "Pressione uma tecla para vincular",
-    "config.rebind-key.combo-instructions": "Pressione uma combinação de tecla para vincular",
+    "config.rebind-key.simple-instructions": "Pressione uma tecla para vincular.",
+    "config.rebind-key.combo-instructions": "Pressione uma combinação de tecla para vincular.",
     "config.rebind-key.no-key": "(Nenhuma)",
+    "config.rebind-key.keybind-list": "Teclas de Atalho:",
 
 
     /*********

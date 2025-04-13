@@ -16,10 +16,12 @@
     "config.buttons.save": "Sauv.",
     "config.buttons.save-and-close": "Sauv. & Fermer",
 
+    // keybind overlay
     "config.rebind-key.title": "Raccourcis : {{optionName}}",
-    "config.rebind-key.simple-instructions": "Appuyez sur une touche",
-    "config.rebind-key.combo-instructions": "Faites une combinaison de touche",
+    "config.rebind-key.simple-instructions": "Appuyez sur une touche.",
+    "config.rebind-key.combo-instructions": "Faites une combinaison de touche.",
     "config.rebind-key.no-key": "(Aucune)",
+    "config.rebind-key.keybind-list": "Touches de raccourcis:",
 
 
     /*********

@@ -43,7 +43,7 @@ namespace GenericModConfigMenu.Framework
         private bool InGame => Context.IsWorldReady;
 
         /// <summary>The active keybind overlay, if any.</summary>
-        private IKeybindOverlay ActiveKeybindOverlay;
+        private KeybindOverlay ActiveKeybindOverlay;
 
         /// <summary>Whether a keybind overlay is open.</summary>
         private bool IsBindingKey => this.ActiveKeybindOverlay != null;
@@ -765,7 +765,34 @@ namespace GenericModConfigMenu.Framework
         private void ShowKeybindOverlay<TKeybind>(SimpleModOption<TKeybind> option, Label label)
         {
             Game1.playSound("breathin");
-            this.ActiveKeybindOverlay = new KeybindOverlay<TKeybind>(option, label);
+
+            this.ActiveKeybindOverlay = option switch
+            {
+                SimpleModOption<SButton> buttonOption => new KeybindOverlay(
+                    keybinds: [new Keybind(buttonOption.Value)],
+                    onlyAllowSingleButton: true,
+                    name: option.Name(),
+                    onSaved: keybinds =>
+                    {
+                        buttonOption.Value = keybinds.FirstOrDefault()?.Buttons.FirstOrDefault(SButton.None) ?? SButton.None;
+                        label.String = option.FormatValue();
+                    }
+                ),
+
+                SimpleModOption<KeybindList> listOption => new KeybindOverlay(
+                    keybinds: listOption.Value.Keybinds,
+                    onlyAllowSingleButton: false,
+                    name: option.Name(),
+                    onSaved: keybinds =>
+                    {
+                        listOption.Value = new KeybindList(keybinds);
+                        label.String = option.FormatValue();
+                    }
+                ),
+
+                _ => throw new InvalidOperationException($"Unsupported keybind type {typeof(TKeybind).FullName}.")
+            };
+
             this.Ui.Obscured = true;
         }
 

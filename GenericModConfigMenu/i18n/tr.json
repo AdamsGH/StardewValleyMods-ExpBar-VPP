@@ -16,10 +16,13 @@
     "config.buttons.save": "Kaydet",
     "config.buttons.save-and-close": "Kaydet ve Kapat",
 
+    // keybind overlay
     "config.rebind-key.title": "Yeniden bağlama tuşu: {{optionName}}",
-    "config.rebind-key.simple-instructions": "Yeniden bağlamak için bir tuşa basın",
-    "config.rebind-key.combo-instructions": "Yeniden bağlamak için bir tuş kombinasyonuna basın",
+    "config.rebind-key.simple-instructions": "Yeniden bağlamak için bir tuşa basın.",
+    "config.rebind-key.combo-instructions": "Yeniden bağlamak için bir tuş kombinasyonuna basın.",
     "config.rebind-key.no-key": "(Yok)",
+    "config.rebind-key.keybind-list": "Tuş Atamaları:",
+
 
     /*********
     ** Config options for Generic Mod Config Menu itself
