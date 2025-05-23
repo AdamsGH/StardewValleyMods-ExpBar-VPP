@@ -17,7 +17,7 @@ namespace ExperienceBars
 {
     internal class Mod : StardewModdingAPI.Mod
     {
-        public static readonly int[] ExpNeededForLevel = new[] { 100, 380, 770, 1300, 2150, 3300, 4800, 6900, 10000, 15000 };
+        public static readonly int[] ExpNeededForLevel = new[] { 100, 380, 770, 1300, 2150, 3300, 4800, 6900, 10000, 15000, 21000, 28000, 36000, 45000, 55000, 66000, 78000, 91000, 105000, 120000 };
 
         public static Configuration Config;
         private static readonly Color DefaultBarForeground = new(150, 150, 150);
@@ -140,7 +140,7 @@ namespace ExperienceBars
                         if (skills[i] < extLevels[i])
                             continue;
                         skills[i] = extLevels[i];
-                        exp[i] = skills[i] < 10 ? exp[i] : extExp[i];
+                        exp[i] = skills[i] < 20 ? exp[i] : extExp[i];
                     }
                     foundLevelExtender = true;
                 }
@@ -162,7 +162,7 @@ namespace ExperienceBars
                 {
                     nextReq = Mod.ExpNeededForLevel[0];
                 }
-                else if (skills[i] < 10)
+                else if (skills[i] < 20)
                 {
                     prevReq = Mod.ExpNeededForLevel[skills[i] - 1];
                     nextReq = Mod.ExpNeededForLevel[skills[i]];
@@ -176,7 +176,7 @@ namespace ExperienceBars
                 int haveExp = exp[i] - prevReq;
                 int needExp = nextReq - prevReq;
                 float progress = (float)haveExp / needExp;
-                if (skills[i] == 10 && !foundLevelExtender || skills[i] == 100)
+                if (skills[i] == 20 && !foundLevelExtender || skills[i] == 100)
                 {
                     progress = -1;
                 }
@@ -290,8 +290,6 @@ namespace ExperienceBars
                     };
                     background = Color.Multiply(background, colorMultiply);
                     foreground = Color.Multiply(foreground, colorMultiply);
-
-
 
                     emptyColors[x + y * Mod.BarWidth] = background;
                     fillColors[x + y * Mod.BarWidth] = foreground;
