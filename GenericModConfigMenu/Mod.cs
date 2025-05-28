@@ -5,6 +5,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
 using SpaceShared;
+using SpaceShared.APIs;
 using SpaceShared.UI;
 
 using StardewModdingAPI;
@@ -337,6 +338,18 @@ namespace GenericModConfigMenu
                 getValue: () => this.Config.OpenMenuKey,
                 setValue: value => this.Config.OpenMenuKey = value
             );
+
+            var BetterGameMenu = this.Helper.ModRegistry.GetApi<IBetterGameMenuApi>("leclair.bettergamemenu");
+            BetterGameMenu?.OnTabContextMenu(evt =>
+            {
+                if (evt.Tab == nameof(BetterGameMenuTabs.Options))
+                    evt.Entries.Add(evt.CreateEntry(I18n.Button_ModOptions(), () => this.OpenListMenuNew(), null));
+            });
+            BetterGameMenu?.OnPageCreated(evt =>
+            {
+                if (evt.Tab == nameof(BetterGameMenuTabs.Options) && evt.Page is OptionsPage page)
+                    page.options.Add(new OptionsButton(I18n.Button_ModOptions(), () => this.OpenListMenuNew()));
+            });
         }
 
         private void FiveTicksAfterGameLaunched(object sender, UpdateTickingEventArgs e)
