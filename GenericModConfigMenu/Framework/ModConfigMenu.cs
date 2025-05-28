@@ -46,9 +46,11 @@ namespace GenericModConfigMenu.Framework
         /// <summary>Construct an instance.</summary>
         /// <param name="scrollSpeed">The number of field rows to offset when scrolling a config menu.</param>
         /// <param name="openModMenu">Open the config UI for a specific mod.</param>
+        /// <param name="openKeybindsMenu">Open the menu to configure mod keybinds.</param>
+        /// <param name="keybindsTexture">The icon texture for the keybinds menu.</param>
         /// <param name="configs">The mod configurations to display.</param>
         /// <param name="scrollTo">The initial scroll position, represented by the row index at the top of the visible area.</param>
-        public ModConfigMenu(int scrollSpeed, Action<IManifest, int> openModMenu, Action<int> openKeybindingsMenu, ModConfigManager configs, Texture2D keybindingsTex, int? scrollTo = null)
+        public ModConfigMenu(int scrollSpeed, Action<IManifest, int> openModMenu, Action<int> openKeybindsMenu, ModConfigManager configs, Texture2D keybindsTexture, int? scrollTo = null)
         {
             this.ScrollSpeed = scrollSpeed;
             this.OpenModMenu = openModMenu;
@@ -133,10 +135,10 @@ namespace GenericModConfigMenu.Framework
 
             this.Ui.AddChild(this.Table);
 
-            var button = new Button(keybindingsTex)
+            var button = new Button(keybindsTexture)
             {
-                LocalPosition = this.Table.LocalPosition - new Vector2( keybindingsTex.Width / 2 + 32, 0 ),
-                Callback = _ => openKeybindingsMenu( this.ScrollRow),
+                LocalPosition = this.Table.LocalPosition - new Vector2( keybindsTexture.Width / 2 + 32, 0 ),
+                Callback = _ => openKeybindsMenu( this.ScrollRow),
             };
             this.Ui.AddChild(button);
 
